@@ -20,10 +20,10 @@ if __name__ == '__main__':
     employee_name = user_info["name"]
     tasks_completed = list(filter(lambda obj:
                                  (obj["completed"] is True), todo_info))
-    number_of_completed_tasks = len(tasks_completed)
-    number_of_tasks = len(todo_info)
+    number_of_done_tasks = len(tasks_completed)
+    total_number_of_tasks = len(todo_info)
 
-    print("{} has completed tasks({}/{}):".
-          format(employee_name, number_of_completed_tasks, number_of_tasks))
+    print("Employee {} is done with tasks({}/{}):".
+          format(employee_name, number_of_done_tasks, total_number_of_tasks))
 
     [print("\t " + task["title"]) for task in tasks_completed]
