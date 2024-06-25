@@ -32,6 +32,6 @@ if __name__ == '__main__':
     with open(str(employee_id) + '.csv', "w") as file:
         [file.write('"' + str(employee_id) + '",' +
                     '"' + employee_username + '",' +
-                    '"' + str(task["completed"]) + '",' +
+                    '"' + str(task_completed["completed"]) + '",' +
                     '"' + task["title"] + '",' + "\n")
          for task in todos_info]
